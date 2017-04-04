@@ -1,20 +1,17 @@
-bin/
-/db
-/lib/
-/logs/
-/modules
-/project/project
-/project/target
-/target
-tmp/
-test-result
-server.pid
-*.eml
-/dist/
+*.class
+*.log
+
+# sbt specific
 .cache
-*.iml
-*.ipr
-*.iws
-.idea
-out
-.DS_Store
+.history
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
