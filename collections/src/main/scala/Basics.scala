@@ -53,11 +53,22 @@ object Basics {
 
   }
 
-  def main(args: Array[String]) {
-    iteratorTraverse()
-    iteratorGroupedTraverse()
-    iteratorSlidingTraverse()
-    iteratorFindMax()
-    iteratorTakeRight()
+  def traversableDemo(): Unit = {
+    print(s"* Check foreach for ${s}: ")
+    var sum = 0
+    def f(x: Int): Int = x - 1
+
+    val s1 = List("1", 2, 3, "4")
+
+
+    s foreach(sum += _)
+    println(sum)
+    println("adding 100: "+(s ++ Seq(100)))
+    println("substract 1 from each element: "+ (s map f))
+    println("substract 1 from each element: "+ (s.map(x => x-1)))
+    println("collect only strings and transform them to int: "+ (s1 collect {case s: String => s.toInt} ))
+
   }
+
+
 }

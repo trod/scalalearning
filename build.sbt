@@ -8,7 +8,4 @@ val scalaV = "2.11.5"
 lazy val collections = project.in(file("collections"))
   .settings(scalaVersion := scalaV)
   .settings(organization := "com.gitgub.trod")
-  .settings(mainClass in run := Some("com.github.trodr.Basics"))
-
-
-
+  .settings(mainClass in run := Some("com.github.trod.Executor"))
