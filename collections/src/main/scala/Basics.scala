@@ -36,7 +36,7 @@ object Basics {
 
   def iteratorSlidingTraverse(): Unit = {
     print(s"* Sliding Traverse ${s}: ")
-    val it = s sliding (2,1)  // or just sliding 2, where 2 is a sice of chunk
+    val it = s sliding(2, 1) // or just sliding 2, where 2 is a sice of chunk
 
     while (it.hasNext) {
       print(s"${it.next} ")
@@ -48,9 +48,8 @@ object Basics {
     val it = s.iterator
     print(s"* Taking right element ${s}: ")
     print(s"\nit.take(3): ${it.take(3)}")
-    print(s"\ns takeRight(3): ${s takeRight(3)}")
+    print(s"\ns takeRight(3): ${s takeRight (3)}")
     println
-
   }
 
   def traversableDemo(): Unit = {
@@ -61,14 +60,11 @@ object Basics {
     val s1 = List("1", 2, 3, "4")
 
 
-    s foreach(sum += _)
+    s foreach (sum += _)
     println(sum)
-    println("adding 100: "+(s ++ Seq(100)))
-    println("substract 1 from each element: "+ (s map f))
-    println("substract 1 from each element: "+ (s.map(x => x-1)))
-    println("collect only strings and transform them to int: "+ (s1 collect {case s: String => s.toInt} ))
-
+    println("adding 100: " + (s ++ Seq(100)))
+    println("substract 1 from each element: " + (s map f))
+    println("substract 1 from each element: " + (s.map(x => x - 1)))
+    println("collect only strings and transform them to int: " + (s1 collect { case s: String => s.toInt }))
   }
-
-
 }
